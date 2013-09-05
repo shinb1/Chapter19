@@ -19,7 +19,7 @@ public class Exercise3 {
 
 		for (int i = 1; term >= Math.pow(10,-12); i++) {
 			iSubFact = i;
-			while (iSubFact > 1) {
+			while (iSubFact >= 1) {
 				iFact = iFact + iSubFact;
 				iSubFact = iSubFact -1;
 			}
