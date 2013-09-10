@@ -16,7 +16,16 @@ public class Exercise3 {
 		double sum = 1.0;
 
 		for (int i = 1; term >= Math.pow(10,-12); i++) {
+<<<<<<< HEAD
 			term = Math.pow(x,i)/factorial(i);
+=======
+			iSubFact = i;
+			while (iSubFact >= 1) {
+				iFact = iFact + iSubFact;
+				iSubFact = iSubFact -1;
+			}
+			term = Math.pow(x,i)/iFact;
+>>>>>>> 6bc43fc5ebc57f028516ce0a6cf7d554effcfb50
 			sum = sum + term;
 			System.out.println("n: " + i + "\tterm: " + term + "\tsum: " + sum);
 
