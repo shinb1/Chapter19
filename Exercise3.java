@@ -14,19 +14,12 @@ public class Exercise3 {
 	public static void eToThex(double x){
 		double term = 1.0;
 		double sum = 1.0;
-		double iFact = 1.0;
-		double iSubFact = 0.0;
 
 		for (int i = 1; term >= Math.pow(10,-12); i++) {
-			iSubFact = i;
-			while (iSubFact > 1) {
-				iFact = iFact + iSubFact;
-				iSubFact = iSubFact -1;
-			}
-			term = Math.pow(x,i)/iFact;
+			term = Math.pow(x,i)/factorial(i);
 			sum = sum + term;
 			System.out.println("n: " + i + "\tterm: " + term + "\tsum: " + sum);
-			iFact = 1;
+
 		}
 
 		System.out.println("\tmy\te^x: " + sum);
@@ -34,4 +27,13 @@ public class Exercise3 {
 
 		return;
 	}
+	
+    public static int factorial(int n) {
+        int fact = 1; 
+        for (int i = 1; i <= n; i++) {
+            fact *= i;
+        }
+        return fact;
+    }
 }
+
